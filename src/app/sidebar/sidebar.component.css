@@ -1,0 +1,90 @@
+.sidebar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 64px;
+    background: black;
+    transition: width 0.4s;
+    color: white
+}
+
+.sidebar nav{
+    padding: 0 8px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 72px;
+    padding: 0 14px 0 14px;
+    background: var(--color-highlight); 
+    color: white;      
+}
+
+.header img {
+    height: 24px;
+    /* rotate: 180deg; */
+    margin-left: 14px;
+}
+
+.header h1,
+.sidebar a p {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    translate: 0 -50%;
+    opacity: 0;
+    margin: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: 0.175s;
+}
+
+
+.header h1 {
+    left: 60px;
+    font-size: 16px;
+}
+
+.sidebar:hover {
+    width: 180px;
+}
+
+.sidebar:hover 
+:is(a p, .header h1) {
+    opacity: 1;
+}
+
+.sidebar a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 44px;
+    width: 90%;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0 0 0 16px;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.sidebar a:hover {
+    background: rgb(41, 42, 41);
+    padding: 0 0 0 12px;
+    opacity: 1;
+}
+
+.sidebar a:hover p {
+    font-size: 20px;
+}

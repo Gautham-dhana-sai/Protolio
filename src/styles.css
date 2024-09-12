@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+.icon-small{
+    font-size: 24px;
+}
+
+.icon-medium{
+    font-size: 36px;
+}
+
+.icon-large{
+    font-size: 48px;
+}
+
+.icon-xlarge{
+    font-size: 60px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.white-color{
+    color: white
+}
