@@ -1,0 +1,32 @@
+<nav>
+    <ul class="menu">
+        <li (click)="changeTab('languages')"><a [ngClass]="{'selected': tab === 'languages'}">Languages</a></li>
+        <li (click)="changeTab('frameWorks')"><a [ngClass]="{'selected': tab === 'frameWorks'}">Frame Works</a></li>
+        <li (click)="changeTab('tools')"><a [ngClass]="{'selected': tab === 'tools'}">Tools</a></li>
+        <li (click)="changeTab('technologies')"><a [ngClass]="{'selected': tab === 'technologies'}">Technologies</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="img-gallery">
+    <ng-container *ngFor="let skill of skills">
+        <img src="../../../assets/images/Skills/{{skill.image}}" (click)="openItem(skill)">
+    </ng-container>
+</div>
+
+<div id="openItem" class="modal">
+    <div class="grid">
+        <div class="card">
+            <img src="../../../assets/images/Skills/{{selectedSkill.image}}">
+            <div class="box">
+                <h2>{{selectedSkill.name}}</h2>
+                <h3>{{selectedSkill.category}}</h3>
+                <p>
+                    Content here
+                </p>
+                <a href="{{selectedSkill.link}}" target="_blank">Know More</a>
+            </div>
+            <span class="close" (click)="closeModal()">&times;</span>
+        </div>
+    </div>
+</div>

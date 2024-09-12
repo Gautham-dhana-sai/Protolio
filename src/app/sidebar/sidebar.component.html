@@ -1,0 +1,15 @@
+<aside class="sidebar">
+    <div class="header">
+        <!-- <img src="../../assets/images/logo/main-logo.jpg"> -->
+        <i class="fab fa-grav icon-medium"></i>
+        <h1>SideBar</h1>
+    </div>
+    <nav>
+        <ng-container *ngFor="let item of menuItems">
+            <a (click)="selectMenu(item)">
+                <i class="{{item.icon}}"></i>
+                <p>{{item.name}}</p>
+            </a>
+        </ng-container>
+    </nav>
+</aside>

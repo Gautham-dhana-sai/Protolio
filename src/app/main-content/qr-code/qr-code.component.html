@@ -1,0 +1,29 @@
+<div >
+    <div class="cards">
+        <ng-container *ngFor="let item of qrData">
+            <label>
+                <input type="checkbox">
+                <div class="card">
+                    <div class="front">
+                        <header>
+                            <h2>{{item.portal}}</h2>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </header>
+                        <!-- <var></var> -->
+                        <i class="fab fa-{{item.portal.toLowerCase()}} icon-xlarge "></i>
+                        <h4>{{item.text}}</h4>
+                        <h5>Tap to get QR</h5>
+                    </div>
+                    <div class="back">
+                        <header>
+                            <h2>{{item.portal}}</h2>
+                            <i class="fas fa-times"></i>
+                        </header>
+                        <img [src]="item.base64" alt="Base64 Image">
+                        <!-- <p>More</p> -->
+                    </div>
+                </div>
+            </label>
+        </ng-container>
+    </div>
+</div>
